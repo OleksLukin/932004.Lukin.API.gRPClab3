@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcServer";
+
+service Converter {
+	rpc GetConvertedText (ConverterRequest) returns (ConverterReply);
+}
+
+message ConverterRequest {
+	string textToConvert = 1;
+}
+
+message ConverterReply {
+	string convertedAllText = 1;
+}
